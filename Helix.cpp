@@ -41,8 +41,9 @@ int main()
 		processInput(window);
 
 		// ‰÷»æ÷∏¡Ó
+		glClearColor(1.0, 1.0, 1.0, 0.0);
 		glClear(GL_COLOR_BUFFER_BIT);
-		glColor3f(1., 1.0, 1.0);
+		glColor3f(0., 0.0, 0.0);
 
 		setProj();
 		float R = 20.0; // Radius of helix.
@@ -73,7 +74,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 void setProj() {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glFrustum(-5.0, 5.0, -5.0, 5.0, 5.0, 100.0);
+	glFrustum(-15.0, 15.0, -15.0, 15.0, 5.0, 120.0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
